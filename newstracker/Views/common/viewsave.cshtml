@@ -1,0 +1,563 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="~/Scripts/jquery-1.8.2.js"></script>
+    <script src="~/Scripts/knockout-2.2.0.js"></script>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>newstracker.com</title>
+
+    <!-- Bootstrap -->
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+    <!-- for fontawesome icon css file -->
+    <link href="/css/font-awesome.min.css" rel="stylesheet">
+    <!-- for content animate css file -->
+    <link rel="stylesheet" href="/css/animate.css">
+    <!-- google fonts  -->
+    <link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+    <!-- slick slider css file -->
+    <link href="/css/slick.css" rel="stylesheet">
+    <!-- <link href="/css/theme-red.css" rel="stylesheet"> -->
+    <link href="/css/theme.css" rel="stylesheet">
+    <!-- main site css file -->
+    <link href="/style.css" rel="stylesheet">
+
+
+    <script src="/js/jquery-1.9.1.min.js"></script>
+    <script src="/js/sweetalert-dev.js"></script>
+    <link href="/css/sweetalert.css" rel="stylesheet" />
+
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+
+    <!-- =========================
+      //////////////This Theme Design and Developed //////////////////////
+      //////////// by www.wpfreeware.com======================-->
+    <!-- Preloader -->
+    <div id="preloader">
+        <div id="status">&nbsp;</div>
+    </div>
+    <!-- End Preloader -->
+
+    <a class="scrollToTop" href="#"><i class="fa fa-angle-up"></i></a>
+
+    <div class="container">
+        <!-- start header area -->
+        <header id="header">
+            <div class="row">
+                <div class="col-lg-12 col-md-12">
+                    <!-- start header top -->
+                    <div class="header_top">
+                        <div class="header_top_right">
+                            <ul class="top_nav">
+                                <li style="float: right;"><a href="#" id="logout">logout</a></li>
+
+                            </ul>
+                        </div>
+                    </div><!-- End header top -->
+                    <!-- start header bottom -->
+                    <div class="header_bottom">
+                        <div class="header_bottom_left" style=" margin-right:500px">
+                            <!-- for text logo -->
+                            <a class="logo" href="index.html">
+                                NEWS<strong>tracker</strong>
+                            </a>
+                        </div>
+                        <div class="header_bottom_left" style=" width: 175px;">
+                            <div class="single_bottom_rightbar">
+                                <h2>language</h2>
+                                <div class="blog_archive wow fadeInDown animated animated" style="visibility: visible; animation-name: fadeInDown;">
+                                    <form>
+                                        <select id="s1">
+                                            <option value="malayalam">malayalam</option>,
+                                            <option value="english">english</option>,
+                                            <option value="hindi">hindi</option>
+                                        </select>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="header_bottom_left" style=" width: 175px; margin-left: 10px;">
+                            <div class=" single_bottom_rightbar">
+                                <h2>provider</h2>
+                                <div class="blog_archive wow fadeInDown animated animated" style="visibility: visible; animation-name: fadeInDown;">
+                                    <form>
+                                        <select id="provider" data-bind="options: pro_name,
+                                                  optionsText: 'news_provider',
+                                                  optionsValue: 'rss_id',
+                                                  optionsCaption: 'Select provider' "></select>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!-- End header bottom -->
+                </div>
+            </div>
+        </header><!-- End header area -->
+        <!-- Static navbar -->
+        <div id="navarea">
+            <nav class="navbar navbar-default" role="navigation">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                    </div>
+                    <div id="navbar" class="navbar-collapse collapse">
+                        <ul class="nav navbar-nav custom_nav">
+                            <li class=""><a href="/index">Home</a></li>
+                            <li class="dropdown">
+                                <a href="#" class="" data-toggle="dropdown" role="button" aria-expanded="false">category</a>
+                                <ul class="dropdown-menu" role="menu" data-bind="foreach: category" id="cat">
+                                    <li><a href="#" data-bind="text: category, value: c_id ,event:{click: cat}"></a></li>
+                                </ul>
+                            </li>
+                            <li id=""><a href="#" id="category">add category</a></li>
+                            <li class="dropdown">
+                                <a href="#" class="" data-toggle="dropdown" role="button" aria-expanded="false">rssfeed</a>
+                                <ul class="dropdown-menu" role="menu">
+
+                                    <li><a href="/admin/category">Add Rssfeed</a></li>
+                                    <li><a href="/admin/Updaterss">edit Rssfeed</a></li>
+
+                                </ul>
+                            </li>
+                            <li><a href="archive1.html">about us</a></li>
+                            <li><a href="contact.html">Contact us</a></li>
+
+                        </ul>
+
+
+                    </div><!--/.nav-collapse -->
+
+
+                </div><!--/.container-fluid -->
+            </nav>
+
+        </div>
+        <div class="update-right-border"></div> <!-- /.update-right-border -->
+    </div> <!-- / .ccr-last-update -->
+    <!-- start content top latest slider -->
+
+
+    <section>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</section>
+
+    <section id="ccr-main-section">
+        <div class="container">
+
+
+            <table>
+                <thead>
+                <th>heading&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+                <th>Category&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+                <th>provider&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+                <th>saved news&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+                </thead>
+                <tbody data-bind="foreach: rssall" id="tab">
+                <td><a href="#" id="delete" data-bind=" text: heading,value: news_id, event:{click: newsview}"></a></td>
+                <td data-bind="text: category"></td>
+                <td data-bind="text: news_provider"></td>
+                <td data-bind="text: saved_date"></td>
+                <td><a href="commom/dispsavenews" >view</a></td>
+                
+                </tbody>
+            </table>
+        </div>
+
+
+    </section>
+
+
+    <section>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</section>   <section>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</section>   <section>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</section>
+
+
+
+    <footer id="footer">
+        <div class="footer_top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4 col-md-4 col-sm-4">
+                        <div class="single_footer_top wow fadeInLeft">
+                            <h2>Flicker Images</h2>
+                            <ul class="flicker_nav">
+                                <li>
+                                    <a href="#"><img src="/img/devhill/75x75.jpg" alt="img"></a>
+                                </li>
+                                <li>
+                                    <a href="#"><img src="/img/devhill/75x75.jpg" alt="img"></a>
+                                </li>
+                                <li>
+                                    <a href="#"><img src="/img/devhill/75x75.jpg" alt="img"></a>
+                                </li>
+                                <li>
+                                    <a href="#"><img src="/img/devhill/75x75.jpg" alt="img"></a>
+                                </li>
+                                <li>
+                                    <a href="#"><img src="/img/devhill/75x75.jpg" alt="img"></a>
+                                </li>
+                                <li>
+                                    <a href="#"><img src="/img/devhill/75x75.jpg" alt="img"></a>
+                                </li>
+                                <li>
+                                    <a href="#"><img src="/img/devhill/75x75.jpg" alt="img"></a>
+                                </li>
+                                <li>
+                                    <a href="#"><img src="/img/devhill/75x75.jpg" alt="img"></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-4">
+                        <div class="single_footer_top wow fadeInDown">
+                            <h2>Labels</h2>
+                            <ul class="labels_nav">
+                                <li><a href="#">Gallery</a></li>
+                                <li><a href="#">Business</a></li>
+                                <li><a href="#">Games</a></li>
+                                <li><a href="#">Fashion</a></li>
+                                <li><a href="#">Sports</a></li>
+                                <li><a href="#">Technology</a></li>
+                                <li><a href="#">Slider</a></li>
+                                <li><a href="#">Life & Style</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-4">
+                        <div class="single_footer_top wow fadeInRight">
+                            <h2>About Us</h2>
+                            <p>Interdum et malesuada fames ac ante ipsum primis in faucibus. Sed nec laoreet orci, eget ullamcorper quam. Phasellus lorem neque, </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer_bottom">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                        <div class="footer_bottom_left">
+                            <p>Copyright © 2014 <a href="index.html">Sora Red</a></p>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                        <div class="footer_bottom_right">
+                            <p>Developed BY <a href="http://wpfreeware.com/">Wpfreeware</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- jQuery google CDN Library -->
+    <script src="/js/jquery.min.js"></script>
+    <!-- For content animatin  -->
+    <script src="/js/wow.min.js"></script>
+    <!-- bootstrap js file -->
+    <script src="/js/bootstrap.min.js"></script>
+    <!-- slick slider js file -->
+    <script src="/js/slick.min.js"></script>
+
+    <!-- custom js file include -->
+    <script src="/js/custom.js"></script>
+
+    <!-- =========================
+          //////////////This Theme Design and Developed //////////////////////
+          //////////// by www.wpfreeware.com======================-->
+
+
+    <script>
+
+        $('#category').click(function () {
+
+            swal({
+                title: "Category !",
+                text: "Enter The Name Of New Category",
+                type: "input", showCancelButton: true,
+                closeOnConfirm: false,
+                animation: "slide-from-top",
+                inputPlaceholder: "Category Name"
+            },
+            function (inputValue) {
+
+                if (inputValue === false)
+                    return false;
+                if (inputValue === "") {
+                    swal.showInputError("You Need Specify A New Category");
+                    return false
+                }
+
+                var entity = {};
+                entity.category = inputValue;
+                debugger;
+                var dt = JSON.stringify(entity);
+                $.ajax({
+                    type: "post",
+                    url: "/admin/add_category",
+                    data: dt,
+                    datatype: "json",
+                    contentType: "application/json",
+                    success: function (result) {
+                        if (result == "exist") {
+                            sweetAlert("Oops...", "Category Already Exists...", "error");
+                        }
+                            //alert (inputValue)
+                        else
+                            swal("Nice!", "You Have Added A New Category ", "success");
+                    }
+                });
+
+            });
+
+
+        });
+
+
+
+
+        $.ajax({
+            type: "post",
+            url: "/common/dispnews_2",
+            data: {},
+            datatype: "json",
+            contentType: "application/json",
+            success: function (result) {
+                //responsiveVoice.speak("Hello");
+                debugger;
+                //var dt = JSON.parse(result);
+                //title = dt.news[0].title;
+                //summary = dt.news[0].summary;
+                ko.applyBindings(dt, document.getElementById('tab'));
+
+            }
+        });
+
+
+
+        $('#logout').click(function () {
+
+            swal({
+                title: "Are you sure?",
+                text: "You Really Want To Logout ?",
+                type: "warning",
+                showCancelButton: true,
+                confirmButtonColor: "#DD6B55",
+                confirmButtonText: "Yes, Logout!",
+                cancelButtonText: "No, cancel plx!",
+                closeOnConfirm: false,
+                closeOnCancel: false
+            }, function (isConfirm) {
+                if (isConfirm) {
+                    swal("LoggedOut!", "See You Soon", "success");
+                    window.location.href = "/guest/index";
+                }
+                else {
+                    swal("Cancelled", "Your Really Brilliant :)", "error");
+
+                }
+            });
+        });
+
+        $('#s1').change(function () {
+            debugger;
+            var entity = {};
+            entity.language = $('#s1').val();
+
+
+            var dt = JSON.stringify(entity);
+            //debugger;
+            $.ajax({
+                type: "post",
+                url: "/common/selectprovider",
+                data: dt,
+                dataType: "json",
+                contentType: "Application/json",
+                success: function (a) {
+                    var dt = JSON.parse(a);
+                    ko.applyBindings(dt, document.getElementById('provider'));
+                }
+            });
+        });
+
+        $.ajax({
+            type: "post",
+            url: "/common/list_category",
+            data: {},
+            datatype: "json",
+            contentType: "application/json",
+            success: function (result) {
+                //debugger;
+                var dt = JSON.parse(result);
+                ko.applyBindings(dt, document.getElementById('cat'));
+            }
+        });
+
+        //update rssfeed
+
+        $.ajax({
+            type: "post",
+            url: "/common/viewall",
+            data: {},
+
+            datatype: "json",
+            contentType: "application/json",
+            success: function (result) {
+                debugger;
+                var dt = JSON.parse(result);
+                ko.applyBindings(dt, document.getElementById('tab'));
+            }
+        });
+        function edit(data, event) {
+
+
+            var entity = {};
+            entity.rssid = data.rss_id;
+
+
+            var dt = JSON.stringify(entity);
+            $.ajax({
+                type: "post",
+                url: "/Admin/editall",
+                data: dt,
+                datatype: "json",
+                contentType: "application/json",
+                success: function (result) {
+
+
+                    swal({
+                        title: "RSS !",
+                        text: "Enter The New RSS:",
+                        type: "input", showCancelButton: true,
+                        closeOnConfirm: false,
+                        animation: "slide-from-top",
+                        inputPlaceholder: "text",
+                        inputValue: result.rss
+                    },
+      function (inputValue) {
+          debugger;
+          if (inputValue === false)
+              return false;
+
+          var entity = {};
+          entity.rssid = data.rss_id;
+          entity.rss = inputValue;
+          var dt = JSON.stringify(entity);
+          $.ajax({
+              type: "post",
+              url: "/Admin/editrss",
+              data: dt,
+              datatype: "json",
+              contentType: "application/json",
+              success: function (result) {
+
+                  if (result == "exist") {
+                      sweetAlert("Oops...", "RSS Already Exists...", "error");
+                  }
+                  else if (result == "success") {
+
+                      swal("Nice!", "You Have Updated RSS", "success");
+
+                  }
+                  else {
+                      swal.showInputError("Not Updated");
+                  }
+
+              }
+          });
+
+      });
+
+
+
+                }
+            });
+
+            //  alert(data.rssid);
+        }
+
+
+        function delt(data, event) {
+            var entity = {};
+            entity.rssid = data.rss_id;
+
+
+            var dt = JSON.stringify(entity);
+
+            swal({
+                title: "Are you sure?",
+                text: "You Really Want To delete ?",
+                type: "warning",
+                showCancelButton: true,
+                confirmButtonColor: "#DD6B55",
+                confirmButtonText: "Yes, delete!",
+                cancelButtonText: "No, cancel plx!",
+                closeOnConfirm: false,
+                closeOnCancel: false
+            }, function (isConfirm) {
+                if (isConfirm) {
+                    debugger;
+                    //window.location.href = "/guest/index";
+                    $.ajax({
+                        type: "post",
+                        url: "/admin/deleterss",
+                        data: dt,
+                        datatype: "json",
+                        contentType: "application/json",
+                        success: function (result) {
+                            swal("deleted!", "See You Soon", "success");
+                            window.location.href = '/admin/updaterss';
+
+                        }
+                    });
+
+
+                }
+                else {
+                    swal("Cancelled", "Your Really Brilliant :)", "error");
+
+                }
+            });
+
+        }
+
+
+        function newsview(data, event) {
+            var entity = {};
+            entity.news_id = data.news_id;
+
+
+            var dt = JSON.stringify(entity);
+            $.ajax({
+                type: "post",
+                url: "/common/newsview",
+                data: dt,
+                datatype: "json",
+                contentType: "application/json",
+                success: function (result) {
+
+                    window.location.href = '/common/dispsavenews';
+
+                }
+            });
+        }
+
+    </script>
+</body>
+
+
+</html>

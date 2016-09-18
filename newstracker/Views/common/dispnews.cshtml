@@ -1,0 +1,797 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="http://responsivevoice.org/responsivevoice/responsivevoice.js"></script>
+    <script type="text/javascript" src="https://rawgithub.com/hiddentao/google-tts/master/google-tts.min.js"></script>
+    <script src="~/Scripts/jquery-1.8.2.js"></script>
+    <script src="~/Scripts/knockout-2.2.0.js"></script>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>newstracker.com</title>
+
+    <!-- Bootstrap -->
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+    <!-- for fontawesome icon css file -->
+    <link href="/css/font-awesome.min.css" rel="stylesheet">
+    <!-- for content animate css file -->
+    <link rel="stylesheet" href="/css/animate.css">
+    <!-- google fonts  -->
+    <link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+    <!-- slick slider css file -->
+    <link href="/css/slick.css" rel="stylesheet">
+    <!-- <link href="/css/theme-red.css" rel="stylesheet"> -->
+    <link href="/css/theme.css" rel="stylesheet">
+    <!-- main site css file -->
+    <link href="/style.css" rel="stylesheet">
+
+
+    <script src="/js/jquery-1.9.1.min.js"></script>
+    <script src="/js/sweetalert-dev.js"></script>
+    <link href="/css/sweetalert.css" rel="stylesheet" />
+
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({ pageLanguage: 'en', includedLanguages: 'en,hi,ml', layout: google.translate.TranslateElement.FloatPosition.BOTTOM_RIGHT }, 'google_translate_element');
+        }
+    </script>
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+
+    <!--[if lt IE 9]>
+        <script src="/js/html5shiv.js"></script>
+    <![endif]-->
+    <meta name="google-translate-customization" content="3280487709591956-dc3fc45d489f056a-g5378ebab0cbcd0a4-12" />
+
+</head>
+<body>
+
+    <!-- =========================
+      //////////////This Theme Design and Developed //////////////////////
+      //////////// by www.wpfreeware.com======================-->
+    <!-- Preloader -->
+    <div id="preloader">
+        <div id="status">&nbsp;</div>
+    </div>
+    <!-- End Preloader -->
+
+    <a class="scrollToTop" href="#"><i class="fa fa-angle-up"></i></a>
+
+    <div class="container">
+        <!-- start header area -->
+        <header id="header">
+            <div class="row">
+                <div class="col-lg-12 col-md-12">
+                    <!-- start header top -->
+                    <div class="header_top">
+                        <div class="header_top_right">
+                            <ul class="top_nav">
+                                <li style="float: right;"><a href="#" id="logout">logout</a></li>
+                                
+                            </ul>
+                        </div>
+
+
+                    </div><!-- End header top -->
+                    <!-- start header bottom -->
+                    <div class="header_bottom">
+                        <div class="header_bottom_left" style=" margin-right:500px">
+                            <!-- for text logo -->
+                            <a class="logo" href="index.html">
+                                NEWS<strong>tracker</strong>
+                            </a>
+                        </div>
+                        <div class="header_bottom_left" style=" width: 175px;">
+                            <div class="single_bottom_rightbar">
+                                <h2>language</h2>
+                                <div class="blog_archive wow fadeInDown animated animated" style="visibility: visible; animation-name: fadeInDown;">
+                                    <form>
+                                        
+
+                                        <select id="lang" data-bind="options: lang_name,
+                                                  optionsText: 'language',
+                                                  optionsValue: 'l_id',
+                                                  optionsCaption: 'Select language' "></select>
+
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="header_bottom_left" style=" width: 175px; margin-left: 10px;">
+                            <div class=" single_bottom_rightbar">
+                                <h2>provider</h2>
+                                <div class="blog_archive wow fadeInDown animated animated" style="visibility: visible; animation-name: fadeInDown;">
+                                    <form>
+                                        <select id="provider" data-bind="options: pro_name,
+                                                  optionsText: 'news_provider',
+                                                  optionsValue: 'p_id',
+                                                  optionsCaption: 'Select provider' "></select>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!-- End header bottom -->
+                </div>
+            </div>
+        </header><!-- End header area -->
+        <!-- Static navbar -->
+        <div id="navarea">
+            <nav class="navbar navbar-default" role="navigation">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                    </div>
+
+                    <div id="navbar" class="navbar-collapse collapse">
+                        <ul class="nav navbar-nav custom_nav">
+                            <li class=""><a href="#" id="home">Home</a></li>
+                            <li class="dropdown">
+                                <a href="#" class="" data-toggle="dropdown" role="button" aria-expanded="false">category</a>
+                                <ul class="dropdown-menu" role="menu" data-bind="foreach: category" id="cat">
+                                    <li><a href="#" data-bind="text: category,value: c_id,event:{click: cat}"></a></li>
+                                </ul>
+                            </li>
+                            <li><a href="archive1.html">about us</a></li>
+                            <li><a href="contact.html">Contact us</a></li>
+                            <li><a href="404.html">404 page</a></li>
+                        </ul>
+                    </div><!--/.nav-collapse -->
+
+                </div><!--/.container-fluid -->
+            </nav>
+        </div>
+
+
+        <div class="update-right-border"></div> <!-- /.update-right-border -->
+        <!-- / .ccr-last-update -->
+
+
+        <section id="mainContent">
+
+            <!-- start main content bottom -->
+            <div class="content_bottom">
+                <div class="col-lg-8 col-md-8">
+                    <!-- start content bottom left -->
+                    <input type="button" value="share news" id="share" />
+                    <input type="button" value="save news" id="save" />
+                    <input type="button" value="read" id="read1" />
+                    <div id="google_translate_element"></div>
+                    <div class="content_bottom_left" id="inner">
+                        <div class="single_page_area" id="single" data-bind="foreach: news">
+
+                            <h2 class="post_titile" data-bind="text: title"> </h2>
+                            <div class="single_page_content">
+                                <div class="post_commentbox">
+                                    <a href="#" data-bind="event:{click: web}"><i class="fa fa-user"></i>url</a>
+                                    <span><i class="fa fa-calendar" data-bind="text: date"></i></span>
+                                    <a href="#"><i class="fa fa-tags" data-bind="text: time"></i></a>
+                                </div>
+                                <img class="img-center" data-bind="attr:{src: img}" alt="2nd Image">
+                                <p data-bind ="text: summary"></p>
+                                
+                                
+                            </div>
+                            
+                        </div>
+                    </div><!--End content_bottom_left-->
+                    
+                    @*<!-- start post pagination  -->
+                    <div class="post_pagination">
+                        <div class="prev">
+                            <a class="angle_left" href="#"><i class="fa fa-angle-double-left"></i></a>
+                            <div class="pagincontent">
+                                <span>Previous Post</span>
+                                <a href="#">Aliquam quam orci in molestie a tempor nec</a>
+                            </div>
+                        </div>
+                        <div class="next">
+                            <div class="pagincontent">
+                                <span>Next Post</span>
+                                <a href="#">Aliquam quam orci in molestie a tempor nec</a>
+                            </div>
+                            <a class="angle_right" href="#"><i class="fa fa-angle-double-right"></i></a>
+                        </div>
+                    </div><!-- End post pagination  -->*@
+                    <!-- start share post -->
+                    
+                    <!-- start similar post-->
+                    
+                    <!-- End similar post-->
+                </div>
+                <!-- start content bottom right -->
+                <div class="col-lg-4 col-md-4">
+                    <div class="content_bottom_right">
+                        <!-- start single bottom rightbar -->
+                        <div class="single_bottom_rightbar">
+                            <h2>Recent Post</h2>
+                            <ul class="small_catg popular_catg wow fadeInDown">
+                                <li>
+                                    <div class="media wow fadeInDown">
+                                        <a href="#" class="media-left">
+                                            <img alt="img" src="img/devhill/112x112.jpg">
+                                        </a>
+                                        <div class="media-body">
+                                            <h4 class="media-heading"><a href="#">Duis condimentum nunc pretium lobortis </a></h4>
+                                            <p>Nunc tincidunt, elit non cursus euismod, lacus augue ornare metus, egestas imperdiet nulla nisl quis mauris. Suspendisse a pharetra </p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="media wow fadeInDown">
+                                        <a href="#" class="media-left">
+                                            <img alt="img" src="img/devhill/112x112.jpg">
+                                        </a>
+                                        <div class="media-body">
+                                            <h4 class="media-heading"><a href="#">Duis condimentum nunc pretium lobortis </a></h4>
+                                            <p>Nunc tincidunt, elit non cursus euismod, lacus augue ornare metus, egestas imperdiet nulla nisl quis mauris. Suspendisse a pharetra </p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="media wow fadeInDown">
+                                        <a href="#" class="media-left">
+                                            <img alt="img" src="img/devhill/112x112.jpg">
+                                        </a>
+                                        <div class="media-body">
+                                            <h4 class="media-heading"><a href="#">Duis condimentum nunc pretium lobortis </a></h4>
+                                            <p>Nunc tincidunt, elit non cursus euismod, lacus augue ornare metus, egestas imperdiet nulla nisl quis mauris. Suspendisse a pharetra </p>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div> <!-- End single bottom rightbar -->
+                        <!-- start single bottom rightbar -->
+                        <div class="single_bottom_rightbar">
+                            <ul role="tablist" class="nav nav-tabs custom-tabs">
+                                <li class="active" role="presentation"><a data-toggle="tab" role="tab" aria-controls="home" href="#mostPopular">Most Popular</a></li>
+                                <li role="presentation"><a data-toggle="tab" role="tab" aria-controls="messages" href="#recentComent">Recent Comment</a></li>
+                            </ul>
+                            <div class="tab-content">
+                                <div id="mostPopular" class="tab-pane fade in active" role="tabpanel">
+                                    <ul class="small_catg popular_catg wow fadeInDown">
+                                        <li>
+                                            <div class="media wow fadeInDown">
+                                                <a class="media-left" href="#">
+                                                    <img src="img/devhill/112x112.jpg" alt="img">
+                                                </a>
+                                                <div class="media-body">
+                                                    <h4 class="media-heading"><a href="#">Duis condimentum nunc pretium lobortis </a></h4>
+                                                    <p>Nunc tincidunt, elit non cursus euismod, lacus augue ornare metus, egestas imperdiet nulla nisl quis mauris. Suspendisse a pharetra </p>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="media wow fadeInDown">
+                                                <a class="media-left" href="#">
+                                                    <img src="img/devhill/112x112.jpg" alt="img">
+                                                </a>
+                                                <div class="media-body">
+                                                    <h4 class="media-heading"><a href="#">Duis condimentum nunc pretium lobortis </a></h4>
+                                                    <p>Nunc tincidunt, elit non cursus euismod, lacus augue ornare metus, egestas imperdiet nulla nisl quis mauris. Suspendisse a pharetra </p>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="media wow fadeInDown">
+                                                <a class="media-left" href="#">
+                                                    <img src="img/devhill/112x112.jpg" alt="img">
+                                                </a>
+                                                <div class="media-body">
+                                                    <h4 class="media-heading"><a href="#">Duis condimentum nunc pretium lobortis </a></h4>
+                                                    <p>Nunc tincidunt, elit non cursus euismod, lacus augue ornare metus, egestas imperdiet nulla nisl quis mauris. Suspendisse a pharetra </p>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div id="recentComent" class="tab-pane fade" role="tabpanel">
+                                    <ul class="small_catg popular_catg">
+                                        <li>
+                                            <div class="media wow fadeInDown">
+                                                <a class="media-left" href="#">
+                                                    <img src="img/devhill/112x112.jpg" alt="img">
+                                                </a>
+                                                <div class="media-body">
+                                                    <h4 class="media-heading"><a href="#">Duis condimentum nunc pretium lobortis </a></h4>
+                                                    <p>Nunc tincidunt, elit non cursus euismod, lacus augue ornare metus, egestas imperdiet nulla nisl quis mauris. Suspendisse a pharetra </p>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="media wow fadeInDown">
+                                                <a class="media-left" href="#">
+                                                    <img src="img/devhill/112x112.jpg" alt="img">
+                                                </a>
+                                                <div class="media-body">
+                                                    <h4 class="media-heading"><a href="#">Duis condimentum nunc pretium lobortis </a></h4>
+                                                    <p>Nunc tincidunt, elit non cursus euismod, lacus augue ornare metus, egestas imperdiet nulla nisl quis mauris. Suspendisse a pharetra </p>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="media wow fadeInDown">
+                                                <a class="media-left" href="#">
+                                                    <img src="img/devhill/112x112.jpg" alt="img">
+                                                </a>
+                                                <div class="media-body">
+                                                    <h4 class="media-heading"><a href="#">Duis condimentum nunc pretium lobortis </a></h4>
+                                                    <p>Nunc tincidunt, elit non cursus euismod, lacus augue ornare metus, egestas imperdiet nulla nisl quis mauris. Suspendisse a pharetra </p>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div> <!-- End single bottom rightbar -->
+                        <div class="single_bottom_rightbar">
+                            <h2>Blog Archive</h2>
+                            <div class="blog_archive wow fadeInDown">
+                                <form>
+                                    <select>
+                                        <option value="">Blog Archive</option>
+                                        <option value="">October(20)</option>
+                                    </select>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="single_bottom_rightbar wow fadeInDown">
+                            <h2>Popular Lnks</h2>
+                            <ul>
+                                <li><a href="#">Blog</a></li>
+                                <li><a href="#">Blog Home</a></li>
+                                <li><a href="#">Error Page</a></li>
+                                <li><a href="#">Social link</a></li>
+                                <li><a href="#">Login</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- start content bottom right -->
+            </div><!-- end main content bottom -->
+        </section><!-- End site main content -->
+    </div> <!-- /.container -->
+
+    <footer id="footer">
+        <div class="footer_top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4 col-md-4 col-sm-4">
+                        <div class="single_footer_top wow fadeInLeft">
+                            <h2>Flicker Images</h2>
+                            <ul class="flicker_nav">
+                                <li>
+                                    <a href="#"><img src="/img/devhill/75x75.jpg" alt="img"></a>
+                                </li>
+                                <li>
+                                    <a href="#"><img src="/img/devhill/75x75.jpg" alt="img"></a>
+                                </li>
+                                <li>
+                                    <a href="#"><img src="/img/devhill/75x75.jpg" alt="img"></a>
+                                </li>
+                                <li>
+                                    <a href="#"><img src="/img/devhill/75x75.jpg" alt="img"></a>
+                                </li>
+                                <li>
+                                    <a href="#"><img src="/img/devhill/75x75.jpg" alt="img"></a>
+                                </li>
+                                <li>
+                                    <a href="#"><img src="/img/devhill/75x75.jpg" alt="img"></a>
+                                </li>
+                                <li>
+                                    <a href="#"><img src="/img/devhill/75x75.jpg" alt="img"></a>
+                                </li>
+                                <li>
+                                    <a href="#"><img src="/img/devhill/75x75.jpg" alt="img"></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-4">
+                        <div class="single_footer_top wow fadeInDown">
+                            <h2>Labels</h2>
+                            <ul class="labels_nav">
+                                <li><a href="#">Gallery</a></li>
+                                <li><a href="#">Business</a></li>
+                                <li><a href="#">Games</a></li>
+                                <li><a href="#">Fashion</a></li>
+                                <li><a href="#">Sports</a></li>
+                                <li><a href="#">Technology</a></li>
+                                <li><a href="#">Slider</a></li>
+                                <li><a href="#">Life & Style</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-4">
+                        <div class="single_footer_top wow fadeInRight">
+                            <h2>About Us</h2>
+                            <p>Interdum et malesuada fames ac ante ipsum primis in faucibus. Sed nec laoreet orci, eget ullamcorper quam. Phasellus lorem neque, </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer_bottom">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                        <div class="footer_bottom_left">
+                            <p>Copyright © 2014 <a href="index.html">Sora Red</a></p>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                        <div class="footer_bottom_right">
+                            <p>Developed BY <a href="http://wpfreeware.com/">Wpfreeware</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- jQuery google CDN Library -->
+    <script src="/js/jquery.min.js"></script>
+    <!-- For content animatin  -->
+    <script src="/js/wow.min.js"></script>
+    <!-- bootstrap js file -->
+    <script src="/js/bootstrap.min.js"></script>
+    <!-- slick slider js file -->
+    <script src="/js/slick.min.js"></script>
+
+    <!-- custom js file include -->
+    <script src="/js/custom.js"></script>
+
+    <!-- =========================
+          //////////////This Theme Design and Developed //////////////////////
+          //////////// by www.wpfreeware.com======================-->
+
+
+    <script>
+        
+
+        $('#logout').click(function () {
+
+            swal({
+                title: "Are you sure?",
+                text: "You Really Want To Logout ?",
+                type: "warning",
+                showCancelButton: true,
+                confirmButtonColor: "#DD6B55",
+                confirmButtonText: "Yes, Logout!",
+                cancelButtonText: "No, cancel plx!",
+                closeOnConfirm: false,
+                closeOnCancel: false
+            }, function (isConfirm) {
+                if (isConfirm) {
+                    swal("LoggedOut!", "See You Soon", "success");
+                    window.location.href = "/guest/guest_index";
+                }
+                else {
+                    swal("Cancelled", "Your Really Brilliant :)", "error");
+
+                }
+            });
+        });
+
+        $.ajax({
+            type: "post",
+            url: "/common/list_language",
+            data: {},
+            datatype: "json",
+            contentType: "application/json",
+            success: function (result) {
+                debugger;
+                var dt = JSON.parse(result);
+                ko.applyBindings(dt, document.getElementById('lang'));
+            }
+        });
+
+        $('#lang').change(function () {
+            debugger;
+            var entity = {};
+            entity.lang = $('#lang').val();
+
+
+            var dt = JSON.stringify(entity);
+            debugger;
+            $.ajax({
+                type: "post",
+                url: "/common/selectprovider",
+                data: dt,
+                dataType: "json",
+                contentType: "Application/json",
+                success: function (a) {
+                    var dt = JSON.parse(a);
+                    ko.applyBindings(dt, document.getElementById('provider'));
+                }
+            });
+        });
+
+        $.ajax({
+            type: "post",
+            url: "/common/list_category",
+            data: {},
+            datatype: "json",
+            contentType: "application/json",
+            success: function (result) {
+                debugger;
+                var dt = JSON.parse(result);
+                ko.applyBindings(dt, document.getElementById('cat'));
+            }
+        });
+
+        function cat(data, event) {
+            debugger;
+
+            var entity = {};
+            entity.provider = $('#provider').val();
+            entity.category = data.c_id;
+
+            var dt = JSON.stringify(entity);
+
+            $.ajax({
+                type: "post",
+                url: "/common/page",
+                data: dt,
+                dataType: "json",
+                contentType: "Application/json",
+                success: function (a) {
+                    window.location.href = "/common/catview";
+
+                }
+            });
+
+        }
+
+
+        $.ajax({
+            type: "post",
+            url: "/common/dispnews_1",
+            data: {},
+            datatype: "json",
+            contentType: "application/json",
+            success: function (result) {
+                //responsiveVoice.speak("Hello");
+                debugger;
+                var dt = JSON.parse(result);
+                title = dt.news[0].title;
+                summary = dt.news[0].summary;
+                ko.applyBindings(dt, document.getElementById('single'));
+
+            }
+        });
+
+        function web(data, event) {
+            
+            $.ajax({
+                type: "post",
+                url: "/common/url",
+                data: {},
+                dataType: "json",
+                contentType: "Application/json",
+                success: function (a) {
+                                     
+                    window.open(a, '_blank');
+                }
+            });
+
+        }
+        ///---maninews list----///
+
+        //var entity = {};
+        //entity.rss = "http://www.ibnlive.com/rss/tech.xml";
+        //var data = JSON.stringify(entity);
+        //$.ajax({
+        //    type: "post",
+        //    url: "/common/getsinglenews",
+        //    data: data,
+        //    datatype: "json",
+        //    contentType: "application/json",
+        //    success: function (result) {
+        //        debugger;
+        //        var dt = JSON.parse(result);
+        //        ko.applyBindings(dt, document.getElementById('single'));
+        //    }
+        //});
+
+
+        /// main news ends---////
+
+
+        function view_main(data, event) {
+           // data.rss;
+
+        }
+        ////main news 2 ends/////
+
+        ///facebook////
+
+
+
+
+        window.fbAsyncInit = function () {
+            FB.init({
+                appId: '1621354111462489',
+                xfbml: true,
+                version: 'v2.4'
+            });
+        };
+
+        (function (d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) { return; }
+            js = d.createElement(s); js.id = id;
+            js.src = "//connect.facebook.net/en_US/sdk.js";
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+
+        $('#share').click(function () {
+            debugger;
+            var dd = document.getElementById('inner').innerText;
+            FB.login(function () {
+                // Note: The call will only work if you accept the permission request
+                FB.api('/me/feed', 'post', { message: dd });
+            }, { scope: 'publish_actions' });
+        });
+        
+////////////////////////////////////////////save news//////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+        $('#save').click(function () {
+            debugger;
+            $.ajax({
+
+                type: "post",
+                url: "/common/savenews",
+                data: {},
+                datatype: "json",
+                contentType: "application/json",
+                success: function (result) {
+                    if (result == "success") {
+                        swal("News saved", "success", "success");
+                    }
+                    else {
+                        swal("Not Saved", "Try Again", "error");
+
+                    }
+                }
+            });
+        })
+
+
+        $('#read1').click(function () {
+            debugger;
+            if ($('#read1').val() == 'Read') {
+
+                responsiveVoice.WORDS_PER_MINUTE = 100;
+                // responsiveVoice.speak(title);
+                // responsiveVoice.speak();
+                $('#read1').val('Stop Reading');
+                responsiveVoice.speak(title + "" + summary);
+            }
+            else {
+
+                responsiveVoice.cancel();
+                $('#read1').val('Read');
+
+            }
+        });
+        function read() {
+            if ($('#read1').val() == 'Read') {
+
+                responsiveVoice.WORDS_PER_MINUTE = 100;
+                // responsiveVoice.speak(title);
+                // responsiveVoice.speak();
+                $('#read1').val('Stop Reading');
+                responsiveVoice.speak(title + "" + summary);
+            }
+            else {
+
+                responsiveVoice.cancel();
+                $('#read1').val('Read');
+
+            }
+        }
+
+
+        function getSelectionText() {
+            var text = "";
+            if (window.getSelection) {
+                text = window.getSelection().toString();
+            } else if (document.selection && document.selection.type != "Control") { // for Internet Explorer 8 and below
+                text = document.selection.createRange().text;
+            }
+            return text;
+        }
+        $(document).ready(function () { // when the document has completed loading
+            responsiveVoice.WORDS_PER_MINUTE = 80;
+            $('div,pre').mouseup(function (e) { // attach the mouseup event for all div and pre tags
+                responsiveVoice.cancel(); // stop anything currently being spoken
+                responsiveVoice.speak(getSelectionText()); //speak the text as returned by getSelectionText
+            })
+        });
+
+
+
+        debugger;
+        var flag = 0;
+
+        window.SpeechRecognition = window.SpeechRecognition ||
+                                        window.webkitSpeechRecognition ||
+                                        null;
+        if (window.SpeechRecognition === null) {
+
+        } else {
+            var recognizer = new window.SpeechRecognition();
+
+            //var log = document.getElementById('log');
+
+            // Recogniser doesn't stop listening even if the user pauses
+            recognizer.continuous = true;
+            // Start recognising
+            recognizer.onresult = function (event) {
+                //transcription.textContent = '';
+                debugger;
+
+                for (var i = event.resultIndex; i < event.results.length; i++) {
+                    var flag_val = $.trim(event.results[i][0].transcript);
+                    if (flag_val == "Start" || flag_val == "start" || flag_val == "star") {
+                        responsiveVoice.speak("Command prompt activated");
+                        flag = 1;
+                    }
+                    if (flag_val == "Stop" || flag_val == "stop") {
+                        //responsiveVoice.speak("Start");
+                        flag = 1;
+                    }
+                    if (flag == 1) {
+                        //if (flag_val == "Read" || flag_val == "read") {
+                        read();
+                    }
+                    else if (flag_val == "Stop Reading" || flag_val == "Stop reading" || flag_val == "stop reading") {
+                        read();
+                    }
+
+                }
+
+
+            }
+        };
+        recognizer.interimResults = false;
+        try {
+            recognizer.start();
+            // log.innerHTML = 'Recognition started' + '<br />' + log.innerHTML;
+        } catch (ex) {
+            //log.innerHTML = 'Recognition error: ' + ex.message + '<br />' + log.innerHTML;
+        }
+
+        $('#home').click(function () {
+
+            if (session["uname"] == "admin") {
+                window.location.href = "/admin/admin_index";
+            }
+            else if (session["uname"] == "guest") {
+                window.location.href = "/guest/guest_index";
+            }
+            else
+                window.location.href = "/user/newsview";
+        });
+    </script>
+</body>
+
+
+</html>
+

@@ -1,0 +1,172 @@
+C:\Users\sree\Documents\Visual Studio 2013\Projects\newstracker\newstracker\bin\newstracker.dll.config
+C:\Users\sree\Documents\Visual Studio 2013\Projects\newstracker\newstracker\bin\newstracker.dll
+C:\Users\sree\Documents\Visual Studio 2013\Projects\newstracker\newstracker\bin\newstracker.pdb
+C:\Users\sree\Documents\Visual Studio 2013\Projects\newstracker\newstracker\bin\Antlr3.Runtime.dll
+C:\Users\sree\Documents\Visual Studio 2013\Projects\newstracker\newstracker\bin\DotNetOpenAuth.AspNet.dll
+C:\Users\sree\Documents\Visual Studio 2013\Projects\newstracker\newstracker\bin\DotNetOpenAuth.Core.dll
+C:\Users\sree\Documents\Visual Studio 2013\Projects\newstracker\newstracker\bin\DotNetOpenAuth.OAuth.Consumer.dll
+C:\Users\sree\Documents\Visual Studio 2013\Projects\newstracker\newstracker\bin\DotNetOpenAuth.OAuth.dll
+C:\Users\sree\Documents\Visual Studio 2013\Projects\newstracker\newstracker\bin\DotNetOpenAuth.OpenId.dll
+C:\Users\sree\Documents\Visual Studio 2013\Projects\newstracker\newstracker\bin\DotNetOpenAuth.OpenId.RelyingParty.dll
+C:\Users\sree\Documents\Visual Studio 2013\Projects\newstracker\newstracker\bin\EntityFramework.dll
+C:\Users\sree\Documents\Visual Studio 2013\Projects\newstracker\newstracker\bin\Microsoft.Data.Edm.dll
+C:\Users\sree\Documents\Visual Studio 2013\Projects\newstracker\newstracker\bin\Microsoft.Data.OData.dll
+C:\Users\sree\Documents\Visual Studio 2013\Projects\newstracker\newstracker\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\sree\Documents\Visual Studio 2013\Projects\newstracker\newstracker\bin\Microsoft.Web.Mvc.FixedDisplayModes.dll
+C:\Users\sree\Documents\Visual Studio 2013\Projects\newstracker\newstracker\bin\Microsoft.Web.WebPages.OAuth.dll
+C:\Users\sree\Documents\Visual Studio 2013\Projects\newstracker\newstracker\bin\Newtonsoft.Json.dll
+C:\Users\sree\Documents\Visual Studio 2013\Projects\newstracker\newstracker\bin\System.Net.Http.Formatting.dll
+C:\Users\sree\Documents\Visual Studio 2013\Projects\newstracker\newstracker\bin\System.Spatial.dll
+C:\Users\sree\Documents\Visual Studio 2013\Projects\newstracker\newstracker\bin\System.Web.Helpers.dll
+C:\Users\sree\Documents\Visual Studio 2013\Projects\newstracker\newstracker\bin\System.Web.Http.dll
+C:\Users\sree\Documents\Visual Studio 2013\Projects\newstracker\newstracker\bin\System.Web.Http.OData.dll
+C:\Users\sree\Documents\Visual Studio 2013\Projects\newstracker\newstracker\bin\System.Web.Http.WebHost.dll
+C:\Users\sree\Documents\Visual Studio 2013\Projects\newstracker\newstracker\bin\System.Web.Mvc.dll
+C:\Users\sree\Documents\Visual Studio 2013\Projects\newstracker\newstracker\bin\System.Web.Optimization.dll
+C:\Users\sree\Documents\Visual Studio 2013\Projects\newstracker\newstracker\bin\System.Web.Razor.dll
+C:\Users\sree\Documents\Visual Studio 2013\Projects\newstracker\newstracker\bin\System.Web.WebPages.Deployment.dll
+C:\Users\sree\Documents\Visual Studio 2013\Projects\newstracker\newstracker\bin\System.Web.WebPages.dll
+C:\Users\sree\Documents\Visual Studio 2013\Projects\newstracker\newstracker\bin\System.Web.WebPages.Razor.dll
+C:\Users\sree\Documents\Visual Studio 2013\Projects\newstracker\newstracker\bin\WebGrease.dll
+C:\Users\sree\Documents\Visual Studio 2013\Projects\newstracker\newstracker\bin\WebMatrix.Data.dll
+C:\Users\sree\Documents\Visual Studio 2013\Projects\newstracker\newstracker\bin\WebMatrix.WebData.dll
+C:\Users\sree\Documents\Visual Studio 2013\Projects\newstracker\newstracker\bin\EntityFramework.xml
+C:\Users\sree\Documents\Visual Studio 2013\Projects\newstracker\newstracker\bin\Newtonsoft.Json.xml
+C:\Users\sree\Documents\Visual Studio 2013\Projects\newstracker\newstracker\bin\System.Net.Http.Formatting.xml
+C:\Users\sree\Documents\Visual Studio 2013\Projects\newstracker\newstracker\bin\System.Web.Helpers.xml
+C:\Users\sree\Documents\Visual Studio 2013\Projects\newstracker\newstracker\bin\System.Web.Http.xml
+C:\Users\sree\Documents\Visual Studio 2013\Projects\newstracker\newstracker\bin\System.Web.Http.WebHost.xml
+C:\Users\sree\Documents\Visual Studio 2013\Projects\newstracker\newstracker\bin\System.Web.Mvc.xml
+C:\Users\sree\Documents\Visual Studio 2013\Projects\newstracker\newstracker\bin\System.Web.Razor.xml
+C:\Users\sree\Documents\Visual Studio 2013\Projects\newstracker\newstracker\bin\System.Web.WebPages.xml
+C:\Users\sree\Documents\Visual Studio 2013\Projects\newstracker\newstracker\bin\System.Web.WebPages.Deployment.xml
+C:\Users\sree\Documents\Visual Studio 2013\Projects\newstracker\newstracker\bin\System.Web.WebPages.Razor.xml
+C:\Users\sree\Documents\Visual Studio 2013\Projects\newstracker\newstracker\bin\WebMatrix.Data.xml
+C:\Users\sree\Documents\Visual Studio 2013\Projects\newstracker\newstracker\bin\Microsoft.Web.WebPages.OAuth.xml
+C:\Users\sree\Documents\Visual Studio 2013\Projects\newstracker\newstracker\bin\WebMatrix.WebData.xml
+C:\Users\sree\Documents\Visual Studio 2013\Projects\newstracker\newstracker\bin\DotNetOpenAuth.AspNet.xml
+C:\Users\sree\Documents\Visual Studio 2013\Projects\newstracker\newstracker\bin\DotNetOpenAuth.Core.xml
+C:\Users\sree\Documents\Visual Studio 2013\Projects\newstracker\newstracker\bin\DotNetOpenAuth.OAuth.Consumer.xml
+C:\Users\sree\Documents\Visual Studio 2013\Projects\newstracker\newstracker\bin\DotNetOpenAuth.OAuth.xml
+C:\Users\sree\Documents\Visual Studio 2013\Projects\newstracker\newstracker\bin\DotNetOpenAuth.OpenId.xml
+C:\Users\sree\Documents\Visual Studio 2013\Projects\newstracker\newstracker\bin\DotNetOpenAuth.OpenId.RelyingParty.xml
+C:\Users\sree\Documents\Visual Studio 2013\Projects\newstracker\newstracker\bin\System.Web.Http.OData.xml
+C:\Users\sree\Documents\Visual Studio 2013\Projects\newstracker\newstracker\bin\Microsoft.Data.Edm.xml
+C:\Users\sree\Documents\Visual Studio 2013\Projects\newstracker\newstracker\bin\Microsoft.Data.OData.xml
+C:\Users\sree\Documents\Visual Studio 2013\Projects\newstracker\newstracker\bin\System.Spatial.xml
+C:\Users\sree\Documents\Visual Studio 2013\Projects\newstracker\newstracker\bin\de\Microsoft.Data.Edm.resources.dll
+C:\Users\sree\Documents\Visual Studio 2013\Projects\newstracker\newstracker\bin\es\Microsoft.Data.Edm.resources.dll
+C:\Users\sree\Documents\Visual Studio 2013\Projects\newstracker\newstracker\bin\fr\Microsoft.Data.Edm.resources.dll
+C:\Users\sree\Documents\Visual Studio 2013\Projects\newstracker\newstracker\bin\it\Microsoft.Data.Edm.resources.dll
+C:\Users\sree\Documents\Visual Studio 2013\Projects\newstracker\newstracker\bin\ja\Microsoft.Data.Edm.resources.dll
+C:\Users\sree\Documents\Visual Studio 2013\Projects\newstracker\newstracker\bin\ko\Microsoft.Data.Edm.resources.dll
+C:\Users\sree\Documents\Visual Studio 2013\Projects\newstracker\newstracker\bin\ru\Microsoft.Data.Edm.resources.dll
+C:\Users\sree\Documents\Visual Studio 2013\Projects\newstracker\newstracker\bin\zh-Hans\Microsoft.Data.Edm.resources.dll
+C:\Users\sree\Documents\Visual Studio 2013\Projects\newstracker\newstracker\bin\zh-Hant\Microsoft.Data.Edm.resources.dll
+C:\Users\sree\Documents\Visual Studio 2013\Projects\newstracker\newstracker\bin\de\Microsoft.Data.OData.resources.dll
+C:\Users\sree\Documents\Visual Studio 2013\Projects\newstracker\newstracker\bin\es\Microsoft.Data.OData.resources.dll
+C:\Users\sree\Documents\Visual Studio 2013\Projects\newstracker\newstracker\bin\fr\Microsoft.Data.OData.resources.dll
+C:\Users\sree\Documents\Visual Studio 2013\Projects\newstracker\newstracker\bin\it\Microsoft.Data.OData.resources.dll
+C:\Users\sree\Documents\Visual Studio 2013\Projects\newstracker\newstracker\bin\ja\Microsoft.Data.OData.resources.dll
+C:\Users\sree\Documents\Visual Studio 2013\Projects\newstracker\newstracker\bin\ko\Microsoft.Data.OData.resources.dll
+C:\Users\sree\Documents\Visual Studio 2013\Projects\newstracker\newstracker\bin\ru\Microsoft.Data.OData.resources.dll
+C:\Users\sree\Documents\Visual Studio 2013\Projects\newstracker\newstracker\bin\zh-Hans\Microsoft.Data.OData.resources.dll
+C:\Users\sree\Documents\Visual Studio 2013\Projects\newstracker\newstracker\bin\zh-Hant\Microsoft.Data.OData.resources.dll
+C:\Users\sree\Documents\Visual Studio 2013\Projects\newstracker\newstracker\bin\de\System.Spatial.resources.dll
+C:\Users\sree\Documents\Visual Studio 2013\Projects\newstracker\newstracker\bin\es\System.Spatial.resources.dll
+C:\Users\sree\Documents\Visual Studio 2013\Projects\newstracker\newstracker\bin\fr\System.Spatial.resources.dll
+C:\Users\sree\Documents\Visual Studio 2013\Projects\newstracker\newstracker\bin\it\System.Spatial.resources.dll
+C:\Users\sree\Documents\Visual Studio 2013\Projects\newstracker\newstracker\bin\ja\System.Spatial.resources.dll
+C:\Users\sree\Documents\Visual Studio 2013\Projects\newstracker\newstracker\bin\ko\System.Spatial.resources.dll
+C:\Users\sree\Documents\Visual Studio 2013\Projects\newstracker\newstracker\bin\ru\System.Spatial.resources.dll
+C:\Users\sree\Documents\Visual Studio 2013\Projects\newstracker\newstracker\bin\zh-Hans\System.Spatial.resources.dll
+C:\Users\sree\Documents\Visual Studio 2013\Projects\newstracker\newstracker\bin\zh-Hant\System.Spatial.resources.dll
+C:\Users\sree\Documents\Visual Studio 2013\Projects\newstracker\newstracker\obj\Debug\newstracker.dll
+C:\Users\sree\Documents\Visual Studio 2013\Projects\newstracker\newstracker\obj\Debug\newstracker.pdb
+C:\Users\sree\Documents\Visual Studio 2013\Projects\newstracker\newstracker\obj\Debug\newstracker.csprojResolveAssemblyReference.cache
+C:\Users\sree\Desktop\newstracker\newstracker\bin\newstracker.dll.config
+C:\Users\sree\Desktop\newstracker\newstracker\bin\newstracker.dll
+C:\Users\sree\Desktop\newstracker\newstracker\bin\newstracker.pdb
+C:\Users\sree\Desktop\newstracker\newstracker\bin\Antlr3.Runtime.dll
+C:\Users\sree\Desktop\newstracker\newstracker\bin\DotNetOpenAuth.AspNet.dll
+C:\Users\sree\Desktop\newstracker\newstracker\bin\DotNetOpenAuth.Core.dll
+C:\Users\sree\Desktop\newstracker\newstracker\bin\DotNetOpenAuth.OAuth.Consumer.dll
+C:\Users\sree\Desktop\newstracker\newstracker\bin\DotNetOpenAuth.OAuth.dll
+C:\Users\sree\Desktop\newstracker\newstracker\bin\DotNetOpenAuth.OpenId.dll
+C:\Users\sree\Desktop\newstracker\newstracker\bin\DotNetOpenAuth.OpenId.RelyingParty.dll
+C:\Users\sree\Desktop\newstracker\newstracker\bin\EntityFramework.dll
+C:\Users\sree\Desktop\newstracker\newstracker\bin\Microsoft.Data.Edm.dll
+C:\Users\sree\Desktop\newstracker\newstracker\bin\Microsoft.Data.OData.dll
+C:\Users\sree\Desktop\newstracker\newstracker\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\sree\Desktop\newstracker\newstracker\bin\Microsoft.Web.Mvc.FixedDisplayModes.dll
+C:\Users\sree\Desktop\newstracker\newstracker\bin\Microsoft.Web.WebPages.OAuth.dll
+C:\Users\sree\Desktop\newstracker\newstracker\bin\Newtonsoft.Json.dll
+C:\Users\sree\Desktop\newstracker\newstracker\bin\System.Net.Http.Formatting.dll
+C:\Users\sree\Desktop\newstracker\newstracker\bin\System.Spatial.dll
+C:\Users\sree\Desktop\newstracker\newstracker\bin\System.Web.Helpers.dll
+C:\Users\sree\Desktop\newstracker\newstracker\bin\System.Web.Http.dll
+C:\Users\sree\Desktop\newstracker\newstracker\bin\System.Web.Http.OData.dll
+C:\Users\sree\Desktop\newstracker\newstracker\bin\System.Web.Http.WebHost.dll
+C:\Users\sree\Desktop\newstracker\newstracker\bin\System.Web.Mvc.dll
+C:\Users\sree\Desktop\newstracker\newstracker\bin\System.Web.Optimization.dll
+C:\Users\sree\Desktop\newstracker\newstracker\bin\System.Web.Razor.dll
+C:\Users\sree\Desktop\newstracker\newstracker\bin\System.Web.WebPages.Deployment.dll
+C:\Users\sree\Desktop\newstracker\newstracker\bin\System.Web.WebPages.dll
+C:\Users\sree\Desktop\newstracker\newstracker\bin\System.Web.WebPages.Razor.dll
+C:\Users\sree\Desktop\newstracker\newstracker\bin\WebGrease.dll
+C:\Users\sree\Desktop\newstracker\newstracker\bin\WebMatrix.Data.dll
+C:\Users\sree\Desktop\newstracker\newstracker\bin\WebMatrix.WebData.dll
+C:\Users\sree\Desktop\newstracker\newstracker\bin\EntityFramework.xml
+C:\Users\sree\Desktop\newstracker\newstracker\bin\Newtonsoft.Json.xml
+C:\Users\sree\Desktop\newstracker\newstracker\bin\System.Net.Http.Formatting.xml
+C:\Users\sree\Desktop\newstracker\newstracker\bin\System.Web.Helpers.xml
+C:\Users\sree\Desktop\newstracker\newstracker\bin\System.Web.Http.xml
+C:\Users\sree\Desktop\newstracker\newstracker\bin\System.Web.Http.WebHost.xml
+C:\Users\sree\Desktop\newstracker\newstracker\bin\System.Web.Mvc.xml
+C:\Users\sree\Desktop\newstracker\newstracker\bin\System.Web.Razor.xml
+C:\Users\sree\Desktop\newstracker\newstracker\bin\System.Web.WebPages.xml
+C:\Users\sree\Desktop\newstracker\newstracker\bin\System.Web.WebPages.Deployment.xml
+C:\Users\sree\Desktop\newstracker\newstracker\bin\System.Web.WebPages.Razor.xml
+C:\Users\sree\Desktop\newstracker\newstracker\bin\WebMatrix.Data.xml
+C:\Users\sree\Desktop\newstracker\newstracker\bin\Microsoft.Web.WebPages.OAuth.xml
+C:\Users\sree\Desktop\newstracker\newstracker\bin\WebMatrix.WebData.xml
+C:\Users\sree\Desktop\newstracker\newstracker\bin\DotNetOpenAuth.AspNet.xml
+C:\Users\sree\Desktop\newstracker\newstracker\bin\DotNetOpenAuth.Core.xml
+C:\Users\sree\Desktop\newstracker\newstracker\bin\DotNetOpenAuth.OAuth.Consumer.xml
+C:\Users\sree\Desktop\newstracker\newstracker\bin\DotNetOpenAuth.OAuth.xml
+C:\Users\sree\Desktop\newstracker\newstracker\bin\DotNetOpenAuth.OpenId.xml
+C:\Users\sree\Desktop\newstracker\newstracker\bin\DotNetOpenAuth.OpenId.RelyingParty.xml
+C:\Users\sree\Desktop\newstracker\newstracker\bin\System.Web.Http.OData.xml
+C:\Users\sree\Desktop\newstracker\newstracker\bin\Microsoft.Data.Edm.xml
+C:\Users\sree\Desktop\newstracker\newstracker\bin\Microsoft.Data.OData.xml
+C:\Users\sree\Desktop\newstracker\newstracker\bin\System.Spatial.xml
+C:\Users\sree\Desktop\newstracker\newstracker\bin\de\Microsoft.Data.Edm.resources.dll
+C:\Users\sree\Desktop\newstracker\newstracker\bin\es\Microsoft.Data.Edm.resources.dll
+C:\Users\sree\Desktop\newstracker\newstracker\bin\fr\Microsoft.Data.Edm.resources.dll
+C:\Users\sree\Desktop\newstracker\newstracker\bin\it\Microsoft.Data.Edm.resources.dll
+C:\Users\sree\Desktop\newstracker\newstracker\bin\ja\Microsoft.Data.Edm.resources.dll
+C:\Users\sree\Desktop\newstracker\newstracker\bin\ko\Microsoft.Data.Edm.resources.dll
+C:\Users\sree\Desktop\newstracker\newstracker\bin\ru\Microsoft.Data.Edm.resources.dll
+C:\Users\sree\Desktop\newstracker\newstracker\bin\zh-Hans\Microsoft.Data.Edm.resources.dll
+C:\Users\sree\Desktop\newstracker\newstracker\bin\zh-Hant\Microsoft.Data.Edm.resources.dll
+C:\Users\sree\Desktop\newstracker\newstracker\bin\de\Microsoft.Data.OData.resources.dll
+C:\Users\sree\Desktop\newstracker\newstracker\bin\es\Microsoft.Data.OData.resources.dll
+C:\Users\sree\Desktop\newstracker\newstracker\bin\fr\Microsoft.Data.OData.resources.dll
+C:\Users\sree\Desktop\newstracker\newstracker\bin\it\Microsoft.Data.OData.resources.dll
+C:\Users\sree\Desktop\newstracker\newstracker\bin\ja\Microsoft.Data.OData.resources.dll
+C:\Users\sree\Desktop\newstracker\newstracker\bin\ko\Microsoft.Data.OData.resources.dll
+C:\Users\sree\Desktop\newstracker\newstracker\bin\ru\Microsoft.Data.OData.resources.dll
+C:\Users\sree\Desktop\newstracker\newstracker\bin\zh-Hans\Microsoft.Data.OData.resources.dll
+C:\Users\sree\Desktop\newstracker\newstracker\bin\zh-Hant\Microsoft.Data.OData.resources.dll
+C:\Users\sree\Desktop\newstracker\newstracker\bin\de\System.Spatial.resources.dll
+C:\Users\sree\Desktop\newstracker\newstracker\bin\es\System.Spatial.resources.dll
+C:\Users\sree\Desktop\newstracker\newstracker\bin\fr\System.Spatial.resources.dll
+C:\Users\sree\Desktop\newstracker\newstracker\bin\it\System.Spatial.resources.dll
+C:\Users\sree\Desktop\newstracker\newstracker\bin\ja\System.Spatial.resources.dll
+C:\Users\sree\Desktop\newstracker\newstracker\bin\ko\System.Spatial.resources.dll
+C:\Users\sree\Desktop\newstracker\newstracker\bin\ru\System.Spatial.resources.dll
+C:\Users\sree\Desktop\newstracker\newstracker\bin\zh-Hans\System.Spatial.resources.dll
+C:\Users\sree\Desktop\newstracker\newstracker\bin\zh-Hant\System.Spatial.resources.dll
+C:\Users\sree\Desktop\newstracker\newstracker\obj\Debug\newstracker.csprojResolveAssemblyReference.cache
+C:\Users\sree\Desktop\newstracker\newstracker\obj\Debug\newstracker.dll
+C:\Users\sree\Desktop\newstracker\newstracker\obj\Debug\newstracker.pdb
